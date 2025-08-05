@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Анна Ратаковских — Психолог</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f7f1ef;
+      color: #3b2f2f;
+      overflow-x: hidden;
+    }
+    .main-container {
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 200px;
+      overflow: hidden;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: #f7f1ef;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #3b2f2f;
+      font-weight: bold;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .hero img {
+      border-radius: 50%;
+      max-width: 300px;
+      width: 100%;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #3b2f2f;
+    }
+    .diagram {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 60px;
+      text-align: center;
+      position: relative;
+    }
+    .about-help {
+      display: flex;
+      gap: 40px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+    .about, .help {
+      flex: 1 1 400px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+    }
+    .stats {
+      margin-top: 20px;
+      font-weight: bold;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .help-item {
+      margin-top: 15px;
+    }
+    .help-item span {
+      font-weight: bold;
+    }
+    .circle-diagram {
+      margin-top: 30px;
+      max-width: 400px;
+      margin-inline: auto;
+    }
+    .feedback-form {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      margin: 60px 20px;
+      max-width: 800px;
+      margin-inline: auto;
+      position: relative;
+    }
+    .feedback-form input, .feedback-form textarea, .feedback-form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .feedback-form button {
+      background-color: #3b2f2f;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .flower-left, .flower-right {
+      position: fixed;
+      bottom: 0;
+      width: 120px;
+      opacity: 0.3;
+      z-index: 0;
+    }
+    .flower-left {
+      left: 0;
+    }
+    .flower-right {
+      right: 0;
+      transform: scaleX(-1);
+    }
+    .mobile-menu {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .mobile-menu {
+        display: block;
+      }
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text h1 {
+        font-size: 24px;
+      }
+      .about-help {
+        flex-direction: column;
+      }
+      .stats {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .flower-left, .flower-right {
+        width: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <img src="https://pngimg.com/uploads/flower/flower_PNG102.png" class="flower-left" alt="цветок">
+    <img src="https://pngimg.com/uploads/flower/flower_PNG102.png" class="flower-right" alt="цветок">
+
+    <header>
+      <nav>
+        <a href="#">ГЛАВНАЯ</a>
+        <a href="#about">ОБО МНЕ</a>
+        <a href="#services">УСЛУГИ</a>
+        <a href="#reviews">ОТЗЫВЫ</a>
+        <a href="#contacts">КОНТАКТЫ</a>
+      </nav>
+      <select class="mobile-menu" onchange="location = this.value;">
+        <option value="#">МЕНЮ</option>
+        <option value="#about">ОБО МНЕ</option>
+        <option value="#services">УСЛУГИ</option>
+        <option value="#reviews">ОТЗЫВЫ</option>
+        <option value="#contacts">КОНТАКТЫ</option>
+      </select>
+      <a href="#contacts">СВЯЗАТЬСЯ СО МНОЙ</a>
+    </header>
+
+    <section class="hero">
+      <img src="/mnt/data/photo_5870970979826648551_y.jpg" alt="Анна Ратаковских">
+      <div class="hero-text">
+        <h1>АННА РАТАКОВСКИХ</h1>
+        <p>Твой особый психолог, гештальт – терапевт</p>
+        <p>Помогаю женщинам выстроить счастливые отношения с собой на фоне обретения женской уверенности. Понимаю, что самоуважение и любовь к себе — это фундамент для счастья и благополучия.</p>
+      </div>
+    </section>
+
+    <section class="diagram">
+      <h2>Помоги себе сохранять спокойствие даже в трудные времена</h2>
+      <div class="circle-diagram">
+        <img src="https://via.placeholder.com/300x300.png?text=Диаграмма+спокойствия" alt="Диаграмма спокойствия" />
+      </div>
+    </section>
+
+    <section class="about-help">
+      <div class="about" id="about">
+        <h3>ОБО МНЕ</h3>
+        <p>Меня зовут Анна, я работаю психологом больше 5 лет. Занимаюсь индивидуальными и семейными консультациями.</p>
+        <p>Моя цель — создать тёплую безопасную доверительную атмосферу терапевтического пространства. Обрести внутреннюю гармонию, наладить личные отношения.</p>
+        <p>Вместе мы отпустим прошлое, освободимся от блоков, которые мешают жить счастливо.</p>
+        <div class="stats">
+          <div>500+ счастливых клиентов</div>
+          <div>100% конфиденциальность</div>
+        </div>
+      </div>
+
+      <div class="help" id="services">
+        <h3>ЧЕМ Я МОГУ ПОМОЧЬ</h3>
+        <div class="help-item"><span>1.</span> Проработать тревогу и страх</div>
+        <div class="help-item"><span>2.</span> Трудности в отношениях</div>
+        <div class="help-item"><span>3.</span> Депрессивные стадии</div>
+        <div class="help-item"><span>4.</span> Непринятие себя</div>
+        <div class="help-item"><span>5.</span> Подавленное настроение</div>
+        <div class="help-item"><span>6.</span> Неуверенность и апатия</div>
+      </div>
+    </section>
+
+    <section class="feedback-form" id="contacts">
+      <h3>Связаться со мной</h3>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш email" required>
+        <textarea name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
