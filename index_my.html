@@ -68,9 +68,22 @@
 	}
 	
 	.block-horiz {
-      display: flex;
+	  display: flex;
 	  flex-direction: row;
 	  flex-wrap: wrap;
+	  gap: 15px;
+	}
+
+	.block-item {
+	  flex: 1 1 200px;
+	  max-width: 300px;
+	  text-align: center;
+	}
+
+	.block-item img {
+	  width: 100%;
+	  height: auto;
+	  display: block;
 	}
 
     .me-image img {
@@ -209,26 +222,48 @@
     <section>
 	  <div class="block">
 	    <div class="block-horiz">
-        <div class="about" id="about">
-          <h3>ОБО МНЕ</h3>
-          <p>Меня зовут Ангелина, я работаю психологом больше 5 лет. Занимаюсь индивидуальными и семейными консультациями.</p>
-          <p>Моя цель — создать тёплую безопасную доверительную атмосферу терапевтического пространства. Обрести внутреннюю гармонию, наладить личные отношения.</p>
-          <p>Вместе мы отпустим прошлое, освободимся от блоков, которые мешают жить счастливо.</p>
-          <div class="stats">
-            <div>500+ счастливых клиентов</div>
-            <div>100% конфиденциальность</div>
-          </div>
+			<div class="about" id="about">
+			  <h3>ОБО МНЕ</h3>
+			  <p>Меня зовут Ангелина, я работаю психологом больше 5 лет. Занимаюсь индивидуальными и семейными консультациями.</p>
+			  <p>Моя цель — создать тёплую безопасную доверительную атмосферу терапевтического пространства. Обрести внутреннюю гармонию, наладить личные отношения.</p>
+			  <p>Вместе мы отпустим прошлое, освободимся от блоков, которые мешают жить счастливо.</p>
+			  <div class="stats">
+				<div>500+ счастливых клиентов</div>
+				<div>100% конфиденциальность</div>
+			  </div>
+			</div>
+			
+			<div class="help" id="services">
+			  <h3>ЧЕМ Я МОГУ ПОМОЧЬ</h3>
+			  <div class="help-item"><span>1.</span> Проработать тревогу и страх</div>
+			  <div class="help-item"><span>2.</span> Трудности в отношениях</div>
+			  <div class="help-item"><span>3.</span> Депрессивные стадии</div>
+			  <div class="help-item"><span>4.</span> Непринятие себя</div>
+			  <div class="help-item"><span>5.</span> Подавленное настроение</div>
+			  <div class="help-item"><span>6.</span> Неуверенность и апатия</div>
+			</div>
         </div>
-	    
-        <div class="help" id="services">
-          <h3>ЧЕМ Я МОГУ ПОМОЧЬ</h3>
-          <div class="help-item"><span>1.</span> Проработать тревогу и страх</div>
-          <div class="help-item"><span>2.</span> Трудности в отношениях</div>
-          <div class="help-item"><span>3.</span> Депрессивные стадии</div>
-          <div class="help-item"><span>4.</span> Непринятие себя</div>
-          <div class="help-item"><span>5.</span> Подавленное настроение</div>
-          <div class="help-item"><span>6.</span> Неуверенность и апатия</div>
-        </div>
+	  </div>
+    </section>
+	
+    <section>
+	  <div class="block">
+        <h3>МОЁ ОБРАЗОВАНИЕ</h3>
+	    <div class="block-horiz">
+			<div class="block-item">
+			  <img src="pdpu.jpg" alt="Южноукраинский национальный педагогический университет имени К. Д. Ушинского"/>
+			  <p>Южноукраинский национальный педагогический университет имени К. Д. Ушинского</p>
+			</div>
+			
+			<div class="block-item">
+			  <img src="san.jpg" alt="Społeczna Akademia Nauk"/>
+			  <p>Społeczna Akademia Nauk</p>
+			</div>
+
+			<div class="block-item">
+			  <img src="kgu.jpg" alt="Киевский Гештальт Университет"/>
+			  <p>Киевский Гештальт Университет</p>
+			</div>
         </div>
 	  </div>
     </section>
