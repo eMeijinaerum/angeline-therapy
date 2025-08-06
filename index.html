@@ -75,15 +75,6 @@
 	  z-index: 0;
 	}
 
-	.bg-stem {
-	  position: absolute;
-	  right: 0px;
-	  bottom: 0px;
-	  height: 450px;
-	  pointer-events: none;
-	  z-index: 0;
-	}
-
 	.block-text {
 	  width: 100%;
 	}
@@ -154,7 +145,8 @@
       display: block;
       max-width: 450px;
       width: 100%;
-      height: 100%;
+      height: auto;
+	  object-fit: contain;
     }
 
 	.about-img {
@@ -302,7 +294,7 @@
     <section id="contacts">
 	  <div class="block">
 		<h3>Связаться со мной</h3>
-		<p>Длительность: 60 мин — 100 zł / 1000 грн</p>
+		<p>Длительность 60 мин - 100 zł / 1000 грн</p>
 		<div class="feedback-form">
 		  <form action="https://formspree.io/f/mrblyolw" method="POST">
 		  	<input type="text" name="name" placeholder="Ваше имя" required>
@@ -310,7 +302,6 @@
 		  	<textarea name="message" rows="5" placeholder="Ваше сообщение (необязательно)"></textarea>
 		  	<button type="submit">Отправить</button>
 		  </form>
-		  <img class="bg-stem" src="stem.png">
         </div>
 	  </div>
     </section>
