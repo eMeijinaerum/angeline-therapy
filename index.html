@@ -41,6 +41,7 @@
       padding: 20px;
 	  padding-bottom: 0px;
       max-width: 900px;
+	  gap: 20px 0;
     }
     nav a {
       margin: 5px 10px;
@@ -66,10 +67,21 @@
 	}
 
 	.bg-leaf {
-	  background-image: url('leaf.png'); /* Your image URL here */
-	  background-repeat: no-repeat;
-	  background-position: right bottom;
-	  background-size: 150px auto; /* or 'contain' or 'cover' as needed */
+	  position: absolute;
+	  right: -50px;
+	  bottom: 0px;
+	  width: 150px;
+	  pointer-events: none;
+	  z-index: 0;
+	}
+
+	.bg-stem {
+	  position: absolute;
+	  right: 0px;
+	  bottom: 0px;
+	  height: 450px;
+	  pointer-events: none;
+	  z-index: 0;
 	}
 
 	.block-text {
@@ -90,6 +102,7 @@
 	}
 
 	.block-item img {
+	  border-radius: 5%;
 	  width: 100%;
 	  height: auto;
 	  display: block;
@@ -119,7 +132,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 32px;
     }
-	
+
     .button-link {
       display: inline-block;
       padding: 10px 20px;
@@ -136,10 +149,20 @@
       background-color: #5c4646;
     }
 
-    .circle-diagram img {
+    .circle-diagram {
+      border-radius: 5%;
       display: block;
-      max-width: 100%;
+      max-width: 450px;
+      width: 100%;
       height: auto;
+    }
+
+	.about-img {
+      border-radius: 5%;
+	  float: left;
+	  margin: 0 15px 15px 0;
+      max-width: 300px;
+      width: 100%;
     }
 
     .feedback-form {
@@ -197,7 +220,7 @@
     </header>
 
     <section>
-	  <div class="block bg-leaf">
+	  <div class="block">
 	    <div class="block-horiz">
           <div class="me-image">
             <img src="psychologist_kw.jpg">
@@ -209,15 +232,13 @@
 			<p><a href="#contacts" class="button-link">Записаться</a></p>
           </div>
 	    </div>
+		<img class="bg-leaf" src="leaf.png">
 	  </div>
     </section>
-	
+
     <section>
 	  <div class="block">
-        <h3>Помоги себе сохранять спокойствие даже в трудные времена</h3>
-        <div class="circle-diagram">
-          <img src="diagram.jpg"/>
-        </div>
+        <img class="circle-diagram" src="diagram.jpg"/>
 	  </div>
     </section>
 
@@ -225,6 +246,7 @@
 	  <div class="block">
 		<div id="about">
 		  <center><h3>ОБО МНЕ</h3></center>
+		  <img class="about-img" src="me.jpg">
 		  <p>Мне 24 года, я практикующий психолог с 2018 года, практикую в гештальт-подходе с 2024 года.</p>
 		  <p>Интерес к психотерапии всегда жил во мне, с самого детства, когда я сама искала ответы на свои вопросы, которые не принято было задавать вслух.</p>
 		  <p>Помню как в пятом классе впервые решилась прийти к школьному психологу. Тогда я не знала слов вроде «проживание контакта» или «травма», но уже чувствовала, насколько важно быть услышанным и понятым.</p>
@@ -258,15 +280,15 @@
     <section>
 	  <div class="block">
         <h3>МОЁ ОБРАЗОВАНИЕ</h3>
-	    <div class="block-horiz">
-			<div class="block-item">
-			  <img src="pdpu.jpg" alt="Южноукраинский национальный педагогический университет имени К. Д. Ушинского"/>
-			  <p>Южноукраинский национальный педагогический университет имени К. Д. Ушинского</p>
-			</div>
-			
+	    <div class="block-horiz">			
 			<div class="block-item">
 			  <img src="san.jpg" alt="Społeczna Akademia Nauk"/>
 			  <p>Społeczna Akademia Nauk</p>
+			</div>
+
+			<div class="block-item">
+			  <img src="pdpu.jpg" alt="Южноукраинский национальный педагогический университет имени К. Д. Ушинского"/>
+			  <p>Южноукраинский национальный педагогический университет имени К. Д. Ушинского</p>
 			</div>
 
 			<div class="block-item">
@@ -288,6 +310,7 @@
 		  	<textarea name="message" rows="5" placeholder="Ваше сообщение (необязательно)"></textarea>
 		  	<button type="submit">Отправить</button>
 		  </form>
+		  <img class="bg-stem" src="stem.png">
         </div>
 	  </div>
     </section>
